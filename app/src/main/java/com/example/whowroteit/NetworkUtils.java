@@ -14,7 +14,7 @@ public class NetworkUtils {
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
 
     private static final String BOOK_BASE_URL = "https://www.googleapis.com/books/v1/volumes?";
-    private static final String QUERY_PARAM =  "q";
+    private static final String QUERY_PARAM = "q";
     private static final String MAX_RESULT = "maxResults";
     private static final String PRINT_TYPE = "printType";
 
@@ -45,7 +45,7 @@ public class NetworkUtils {
                 builder.append(line);
                 builder.append("\n");
             }
-            if(builder.length() == 0)
+            if (builder.length() == 0)
                 return null;
 
             bookJSONString = builder.toString();
@@ -53,9 +53,9 @@ public class NetworkUtils {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if(urlConnection != null)
+            if (urlConnection != null)
                 urlConnection.disconnect();
-            if(reader != null) {
+            if (reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
